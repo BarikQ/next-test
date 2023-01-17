@@ -1,0 +1,10 @@
+.categoriesList {
+  width: 100%;
+  display: grid;
+  grid-template: repeat(3, 178px)/repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2px;
+  border: 2px solid gray;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fdfafa;
+}
