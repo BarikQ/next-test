@@ -98,6 +98,12 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  cursor: pointer;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -18,7 +18,9 @@ export default function Layout({ ...props }: any) {
           min-height: 100vh;
         }
       `}</style>
-      <main className={styles.main}>{props.children}</main>
+      <main className={styles.main}>
+        {props.children}
+      </main>
     </>
   );
 }

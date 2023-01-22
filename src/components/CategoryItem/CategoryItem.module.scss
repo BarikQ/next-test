@@ -1,4 +1,7 @@
 .categoryItem {
+  width: 250px;
+  min-height: 100px;
+  flex-grow: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,17 +13,17 @@
 
   &:hover {
     background: #c2bfbf;
-    transition: 0.5s ease all;
+    transition: 1s ease all;
 
     .categoryImage {
-      width: 100%;
-      height: 100%;
+      transform: scale(1.1);
+      filter: blur(0);
     }
   }
 }
 
 .categoryTitle {
-  padding: 8px;
+  padding: 8px 16px;
   background: #fdfafa;
   border: 2px solid gray;
   position: relative;
@@ -34,8 +37,8 @@
 
   &:after,
   &:before {
-    content: "";
-    width: 100%;
+    // content: "";
+    width: 300px;
     height: 2px;
     background: gray;
     position: absolute;
@@ -44,22 +47,21 @@
   }
 
   &:before {
-    left: -100%;
+    left: -300px;
   }
 
   &:after {
-    right: -100%;
+    right: -300px;
   }
 }
 
 .categoryImage {
-  width: 105%;
-  height: 105%;
+  min-width: 100%;
+  min-height: 100%;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
-  transition: 0.5s ease all;
+  filter: blur(2px);
+  transition: 1s ease all;
+  transform: scale(1.05);
 }

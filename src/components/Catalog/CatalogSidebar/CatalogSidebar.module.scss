@@ -1,0 +1,117 @@
+.burger {
+  display: none;    
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+
+  @media (max-width: 768px) {
+    display: block;
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 25;
+  }
+}
+
+.sidebar {
+  flex-grow: 1;
+  max-width: min-content;
+  height: 100%;
+  padding: 16px;
+  position: sticky;
+  top: 0;
+  border-right: 1px solid black;
+  z-index: 15;
+
+  @media (max-width: 768px) {
+    max-width: unset;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    border: none;
+    background: white;
+    transition: 1s ease all;
+    z-index: 20;
+
+    &Active {
+      left: 0%;
+      transition: 1s ease all;
+    }
+  }
+}
+
+.amount {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  color: #898989;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 140%;
+  color: #1b1b1b;
+}
+
+.filters {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  color: #1b1b1b;
+}
+
+.filter {
+  margin-top: 24px;
+}
+
+.filterTitle {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 140%;
+  color: #1b1b1b;
+}
+
+.filterInputs {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+  gap: 8px;
+
+  label {
+    display: flex;
+    gap: 8px;
+    cursor: pointer;
+  }
+
+  input[type=checkbox] {
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    background: red;
+  }
+}
+
+.priceRange {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 140%;
+  color: #1b1b1b;
+  overflow: hidden;
+
+  input {
+    max-width: 112px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+  }
+
+  @media (max-width: 768px) {
+    input {
+      max-width: unset;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@use 'src/styles/_colors.scss' as colors;
+
+.toCategories {
+  align-self: flex-start;
+  margin-bottom: 16px;
+}
+
+.catalog {
+  flex-grow: 1;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-radius: 8px;
+  background-color: colors.$main-background-light;
+  border: 2px solid colors.$border-gray;
+  overflow-y: auto;
+}
+
+.catalogList {
+  flex-grow: 1;
+  display: grid;
+  gap: 16px;
+  grid-template: 1fr / repeat(auto-fill, minmax(200px, 1fr));
+  padding-right: 16px;
+  background: colors.$main-background-light;
+}

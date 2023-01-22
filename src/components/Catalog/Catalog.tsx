@@ -1,12 +1,22 @@
-import styles from "./Catalog.module.scss";
 import CatalogItem from "./CatalogItem/CatalogItem";
 import CatalogSidebar from "./CatalogSidebar/CatalogSidebar";
 
+import styles from "./Catalog.module.scss";
+import CatalogList from "./CatalogList/CatalogList";
+import Link from "next/link";
+
 export default function Catalog({ items, filters, catalogData }: any) {
   return (
-    <div>
-      <CatalogSidebar sidebarData={catalogData} filters={filters} />
-      {items ? items.map((item: any) => <CatalogItem key={item.id} {...item} />) : <div>404</div>}
-    </div>
+    <>
+    <Link className={styles.toCategories} href="/categories">{`<`} To Categories</Link>
+      <div className={styles.catalog}>
+        <CatalogSidebar
+          className={styles.catalogSidebar}
+          sidebarData={{ ...catalogData, amount: items.length }}
+          filters={filters}
+        />
+        <CatalogList className={styles.catalogList} items={items} />
+      </div>
+    </>
   );
 }
