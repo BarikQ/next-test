@@ -1,6 +1,21 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# README
+
+### [DEPLOY](https://next-test-kohl-nu-71.vercel.app/)
+
+- Попрописывал бы типы для функций/пропсов и т.д. (не прописал т.к. экономил время);
+- Добавление scss переменных для размеров экранов, элементов интерфейса, отступов. + в переменные все остальные цвета и шрифты в миксины или что-то такое.
+  Не добавлял из экономии времени, т.к. они нужны были всего в нескольких местах;
+- Вынес инпуты сайдбара в отдельные компоненты, и ещё некоторые элементы UI (тэги на айтемах, кнопки и т.д.), не вынес, т.к. не хотел тратить на это время; 
+- Упростил бы взаимодействие с URL (query params), но пока не понимаю как это сделать лучше;
+- Лоадер;
+- Дублировал рендер айтемов по 4 раза, чтобы увидеть скроллбар, но решил так и оставить в конце;
+- Возможно добавить Error Boundaries при расширении проекта;
+- Затратил 7 часов +-;
+- Оставил часть бойлерплейта (т.к. что-то забыл удалить) и закомментированный оставил, т.к. хочу потом ещё к ним вернуться.
 
 ## Getting Started
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 First, run the development server:
 
