@@ -10,7 +10,6 @@ export default function CatalogSidebar({
   ...props
 }: any) {
   const router: any = useRouter();
-
   const [filterValues, setFilterValues]: any = useReducer<any>(
     (currentValues: any, newValues: any) => {
       return { ...currentValues, ...newValues };
@@ -25,7 +24,9 @@ export default function CatalogSidebar({
             (prev: any, cur: any) => ({ ...prev, [cur]: true }),
             {}
           )
-        : { [router.query["brands"]]: true },
+        : router.query["brands"]
+        ? { [router.query["brands"]]: true }
+        : {},
       is_new: Boolean(router.query["is_new"]),
       is_promo: Boolean(router.query["is_promo"]),
     }
