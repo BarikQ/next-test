@@ -1,4 +1,5 @@
 import { Catalog, CustomHead } from "@/components";
+import { capilatize } from "@/utils";
 
 const CONTENT_API = "https://getlens-master.s.dev.family/api/pages";
 
@@ -6,10 +7,11 @@ export default function Category({
   categoryItems,
   filters,
   categoryData,
+  categorySlug
 }: any) {
   return (
     <>
-      <CustomHead pageTitle="Next Catalog" />
+      <CustomHead pageTitle={ categorySlug ? `${capilatize(categorySlug)} Catalog` : "Next Catalog"} />
       <Catalog
         filters={filters}
         items={categoryItems}
@@ -64,6 +66,7 @@ export async function getServerSideProps(context: any) {
       categoryData: categories.find(({ slug, title }: any) =>
         slug === categorySlug ? title : null
       ),
+      categorySlug,
     },
   };
 }
